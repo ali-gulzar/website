@@ -1,0 +1,289 @@
+"use client";
+
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Phone, Play, ArrowRight, CheckCircle2, Sparkles, Mic, Volume2 } from "lucide-react";
+
+export default function Hero() {
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleDemoCall = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!phoneNumber) return;
+    
+    setIsSubmitting(true);
+    // Simulate API call
+    await new Promise(resolve => setTimeout(resolve, 1500));
+    setIsSubmitting(false);
+    setSubmitted(true);
+  };
+
+  const features = [
+    "100+ Languages supported",
+    "300+ Integrations",
+    "Enterprise-grade security",
+  ];
+
+  return (
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-mesh" />
+      <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-primary-100/40 via-transparent to-transparent" />
+      <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-accent-100/30 via-transparent to-transparent" />
+      
+      {/* Animated shapes */}
+      <motion.div
+        animate={{ 
+          y: [0, -20, 0],
+          rotate: [0, 5, 0]
+        }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute top-1/4 right-1/4 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl"
+      />
+      <motion.div
+        animate={{ 
+          y: [0, 20, 0],
+          rotate: [0, -5, 0]
+        }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent-500/5 rounded-full blur-3xl"
+      />
+
+      <div className="container-custom relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center lg:text-left"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-100 rounded-full text-sm font-medium text-primary-700 mb-6"
+            >
+              <Sparkles className="w-4 h-4" />
+              Powered by Advanced AI Technology
+            </motion.div>
+
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight mb-6">
+              Raza is stupid
+              <br />
+              <span className="gradient-text">That Sound Human</span>
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl mx-auto lg:mx-0">
+              ValetTalk is an <strong>all-in-one platform</strong> that lets you make AI phone calls 
+              with voice agents that book meetings, qualify leads, and support customers — in{" "}
+              <strong>100+ languages</strong> with <strong>full compliance</strong>.
+            </p>
+
+            {/* Features */}
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mb-8">
+              {features.map((feature, index) => (
+                <motion.div
+                  key={feature}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 + index * 0.1 }}
+                  className="flex items-center gap-2 text-sm text-neutral-600"
+                >
+                  <CheckCircle2 className="w-5 h-5 text-accent-500" />
+                  {feature}
+                </motion.div>
+              ))}
+            </div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <motion.a
+                href="#demo"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-primary"
+              >
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </motion.a>
+              <motion.a
+                href="#watch"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-outline"
+              >
+                <Play className="w-5 h-5 mr-2" />
+                Watch Demo
+              </motion.a>
+            </div>
+          </motion.div>
+
+          {/* Right Content - Demo Card */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="relative"
+          >
+            <div className="relative bg-white rounded-3xl shadow-2xl shadow-neutral-200/50 border border-neutral-100 p-8 overflow-hidden">
+              {/* Card Header */}
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mb-4 shadow-lg shadow-primary-500/30">
+                  <Phone className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                  Try a Free Demo Call
+                </h3>
+                <p className="text-neutral-500 text-sm">
+                  Experience our AI agent calling you in seconds
+                </p>
+              </div>
+
+              {/* Form */}
+              {!submitted ? (
+                <form onSubmit={handleDemoCall} className="space-y-4">
+                  <div className="relative">
+                    <Phone className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" />
+                    <input
+                      type="tel"
+                      placeholder="+1 (555) 000-0000"
+                      value={phoneNumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      className="w-full pl-12 pr-4 py-4 bg-neutral-50 border border-neutral-200 rounded-xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                    />
+                  </div>
+                  <motion.button
+                    type="submit"
+                    disabled={isSubmitting || !phoneNumber}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <span className="flex items-center justify-center gap-2">
+                        <motion.span
+                          animate={{ rotate: 360 }}
+                          transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
+                          className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                        />
+                        Initiating Call...
+                      </span>
+                    ) : (
+                      <>
+                        <Phone className="w-5 h-5 mr-2" />
+                        Get a Demo Call Now
+                      </>
+                    )}
+                  </motion.button>
+                </form>
+              ) : (
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="text-center py-8"
+                >
+                  <motion.div
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent-100 mb-4"
+                  >
+                    <Phone className="w-8 h-8 text-accent-600" />
+                  </motion.div>
+                  <h4 className="text-lg font-semibold text-neutral-900 mb-2">
+                    Ring, ring! 🔔
+                  </h4>
+                  <p className="text-neutral-500">
+                    Our AI agent will call you shortly.
+                  </p>
+                </motion.div>
+              )}
+
+              {/* Visual Elements */}
+              <div className="mt-8 pt-6 border-t border-neutral-100">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="w-3 h-3 rounded-full bg-accent-500 animate-pulse" />
+                    <span className="text-sm text-neutral-500">AI Agent Online</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Mic className="w-4 h-4 text-neutral-400" />
+                    <Volume2 className="w-4 h-4 text-neutral-400" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Decorative gradient */}
+              <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-gradient-to-br from-primary-500/10 to-accent-500/10 rounded-full blur-3xl" />
+            </div>
+
+            {/* Floating badges */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6 }}
+              className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+            >
+              <div className="w-8 h-8 rounded-lg bg-accent-100 flex items-center justify-center">
+                <CheckCircle2 className="w-4 h-4 text-accent-600" />
+              </div>
+              <div>
+                <p className="text-xs font-medium text-neutral-900">99.9% Uptime</p>
+                <p className="text-xs text-neutral-500">Enterprise grade</p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8 }}
+              className="absolute -right-4 bottom-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+            >
+              <div className="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center">
+                <Sparkles className="w-4 h-4 text-primary-600" />
+              </div>
+              <div>
+                <p className="text-xs font-medium text-neutral-900">50+ Concurrent</p>
+                <p className="text-xs text-neutral-500">Calls supported</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Trusted by */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="mt-20 pt-12 border-t border-neutral-100"
+        >
+          <p className="text-center text-sm text-neutral-400 mb-8">
+            Trusted by innovative companies worldwide
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
+            {["Company 1", "Company 2", "Company 3", "Company 4", "Company 5"].map((company, index) => (
+              <motion.div
+                key={company}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1.2 + index * 0.1 }}
+                className="text-neutral-400 font-semibold text-lg"
+              >
+                {company}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+
+
+
