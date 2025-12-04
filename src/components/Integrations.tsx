@@ -18,7 +18,7 @@ const integrations = [
   { name: "Stripe", category: "Payments", description: "Payment processing" },
 ];
 
-const categories = ["All", "CRM", "Scheduling", "Automation", "Communication"];
+// const categories = ["All", "CRM", "Scheduling", "Automation", "Communication"];
 
 export default function Integrations() {
   return (

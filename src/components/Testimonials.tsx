@@ -78,7 +78,7 @@ export default function Testimonials() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}
               initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ export default function Testimonials() {
             { value: "500+", label: "Happy Customers" },
             { value: "99.9%", label: "Uptime SLA" },
             { value: "4.9/5", label: "Customer Rating" },
-          ].map((stat, index) => (
+          ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">
                 {stat.value}
