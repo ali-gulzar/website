@@ -40,7 +40,7 @@ export default function Languages() {
               <span className="gradient-text">Hundreds of Voices</span>
             </h2>
             <p className="text-lg text-neutral-600 mb-8">
-              ValetTalk supports over 100 languages and diverse accents to address a global audience. 
+              Saila supports over 100 languages and diverse accents to address a global audience. 
               Each language comes with hundreds of natural-sounding voice options.
             </p>
 

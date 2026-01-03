@@ -80,7 +80,7 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              ValetTalk is an <strong>all-in-one platform</strong> that lets you make AI phone calls 
+              Saila is an <strong>all-in-one platform</strong> that lets you make AI phone calls 
               with voice agents that book meetings, qualify leads, and support customers — in{" "}
               <strong>100+ languages</strong> with <strong>full compliance</strong>.
             </p>
@@ -254,31 +254,6 @@ export default function Hero() {
             </motion.div>
           </motion.div>
         </div>
-
-        {/* Trusted by */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-20 pt-12 border-t border-neutral-100"
-        >
-          <p className="text-center text-sm text-neutral-400 mb-8">
-            Trusted by innovative companies worldwide
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {["Company 1", "Company 2", "Company 3", "Company 4", "Company 5"].map((company, index) => (
-              <motion.div
-                key={company}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-neutral-400 font-semibold text-lg"
-              >
-                {company}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
