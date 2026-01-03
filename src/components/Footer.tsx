@@ -61,7 +61,7 @@ export default function Footer() {
                 <Phone className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">
-                Valet<span className="text-primary-400">Talk</span>
+                Saila
               </span>
             </a>
             <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
@@ -69,9 +69,9 @@ export default function Footer() {
             </p>
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
-              <a href="mailto:hello@valettalk.com" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
+              <a href="mailto:hello@saila.com" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
                 <Mail className="w-4 h-4" />
-                hello@valettalk.com
+                hello@saila.com
               </a>
               <div className="flex items-center gap-2 text-neutral-400">
                 <MapPin className="w-4 h-4" />
@@ -157,7 +157,7 @@ export default function Footer() {
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-neutral-500 text-sm">
-              © {new Date().getFullYear()} ValetTalk. All rights reserved.
+              © {new Date().getFullYear()} Saila. All rights reserved.
             </p>
             
             {/* Social Links */}

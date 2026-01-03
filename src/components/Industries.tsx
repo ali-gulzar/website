@@ -86,7 +86,7 @@ export default function Industries() {
             <span className="gradient-text">Industry</span>
           </h2>
           <p className="text-lg text-neutral-600">
-            From healthcare to e-commerce, ValetTalk adapts to your industry-specific needs 
+            From healthcare to e-commerce, Saila adapts to your industry-specific needs 
             with pre-built templates and custom solutions.
           </p>
         </motion.div>

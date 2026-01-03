@@ -179,7 +179,7 @@ export default function Features() {
           </h2>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             From inbound customer support to outbound sales campaigns, 
-            ValetTalk handles it all.
+            Saila handles it all.
           </p>
         </motion.div>
 

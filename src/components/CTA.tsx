@@ -49,7 +49,7 @@ export default function CTA() {
           </h2>
           
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
-            Join hundreds of businesses already using ValetTalk to automate calls, 
+            Join hundreds of businesses already using Saila to automate calls, 
             delight customers, and scale operations.
           </p>
 
