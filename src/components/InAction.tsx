@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Phone, Calendar, Waves } from "lucide-react";
+import { Phone, Calendar, Waves, Sparkles } from "lucide-react";
 
 export default function InAction() {
   return (
@@ -15,6 +15,10 @@ export default function InAction() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
+          <span className="inline-flex items-center gap-2 px-4 py-2 bg-primary-50 border border-primary-100 rounded-full text-sm font-medium text-primary-700 mb-6">
+            <Sparkles className="w-4 h-4" />
+            How It Works
+          </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-neutral-900 mb-4">
             See It <span className="gradient-text">In Action</span>
           </h2>
