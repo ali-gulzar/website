@@ -73,9 +73,9 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight mb-6">
-              AI Agent Calling You in Seconds
+              Your <span className="gradient-text">24/7 Multilingual</span>
               <br />
-              <span className="gradient-text">That Sound Human</span>
+              AI Receptionist
             </h1>
 
             {/* Subheadline */}
