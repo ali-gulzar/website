@@ -248,30 +248,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Trusted by */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-20 pt-12 border-t border-neutral-100"
-        >
-          <p className="text-center text-sm text-neutral-400 mb-8">
-            Trusted by innovative companies worldwide
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {["Company 1", "Company 2", "Company 3", "Company 4", "Company 5"].map((company, index) => (
-              <motion.div
-                key={company}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-neutral-400 font-semibold text-lg"
-              >
-                {company}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );
