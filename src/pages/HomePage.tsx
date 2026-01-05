@@ -3,22 +3,14 @@ import {
   Hero,
   InAction,
   WhyItMatters,
-  Features,
   HowItWorks,
-  VoiceDemo,
-  Integrations,
-  Languages,
   Industries,
-  Pricing,
-  Testimonials,
   Security,
   FAQ,
-  CTA,
-  Newsletter,
   Footer,
 } from "@/components";
 
-function App() {
+export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Navigation />
@@ -33,7 +25,6 @@ function App() {
       {/*<Languages />*/}
       {/*<Integrations />*/}
       {/*<Testimonials />*/}
-      {/*<Pricing />*/}
       <FAQ />
       {/*<CTA />*/}
       {/*<Newsletter />*/}
@@ -41,7 +32,3 @@ function App() {
     </main>
   );
 }
-
-export default App;
-
-
