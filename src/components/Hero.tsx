@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Play, ArrowRight, CheckCircle2, Sparkles, Mic, Volume2 } from "lucide-react";
+import { Phone, Play, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function Hero() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -21,19 +21,28 @@ export default function Hero() {
   };
 
   const features = [
-    "100+ Languages supported",
-    "300+ Integrations",
+    "5+ Languages supported",
     "Enterprise-grade security",
   ];
 
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background */}
+      {/* Background with dot grid pattern */}
       <div className="absolute inset-0 bg-gradient-mesh" />
+      {/* Dot grid pattern */}
+      <div 
+        className="absolute inset-0" 
+        style={{
+          backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 2px, transparent 2px)',
+          backgroundSize: '24px 24px'
+        }} 
+      />
+      {/* Gradient overlay to fade dots near content */}
+      <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
       <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-radial from-primary-100/40 via-transparent to-transparent" />
       <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-radial from-accent-100/30 via-transparent to-transparent" />
       
-      {/* Animated shapes */}
+      {/* Animated shapes - simple version */}
       <motion.div
         animate={{ 
           y: [0, -20, 0],
@@ -73,16 +82,16 @@ export default function Hero() {
 
             {/* Headline */}
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight mb-6">
-              AI Agent Calling You in Seconds
+              Your <span className="gradient-text">24/7 Multilingual</span>
               <br />
-              <span className="gradient-text">That Sound Human</span>
+              AI Receptionist
             </h1>
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              ValetTalk is an <strong>all-in-one platform</strong> that lets you make AI phone calls 
-              with voice agents that book meetings, qualify leads, and support customers — in{" "}
-              <strong>100+ languages</strong> with <strong>full compliance</strong>.
+              Saila is an <strong>all-in-one platform</strong> that answer calls, book appointments, 
+              and handle inquiries automatically. Works with <strong>Google Calendar, Calendly</strong>, 
+              and simple scheduling tools — in <strong>5+ languages</strong> with <strong>full compliance</strong>.
             </p>
 
             {/* Features */}
@@ -127,11 +136,24 @@ export default function Hero() {
           {/* Right Content - Demo Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            animate={{ 
+              opacity: 1, 
+              x: 0,
+              y: [0, -10, 0]
+            }}
+            transition={{ 
+              opacity: { duration: 0.6, delay: 0.3 },
+              x: { duration: 0.6, delay: 0.3 },
+              y: { 
+                duration: 4, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 1
+              }
+            }}
             className="relative"
           >
-            <div className="relative bg-white rounded-3xl shadow-2xl shadow-neutral-200/50 border border-neutral-100 p-8 overflow-hidden">
+            <div className="relative bg-white/80 backdrop-blur-xl rounded-3xl shadow-2xl shadow-primary-500/10 border border-white/20 p-8 overflow-hidden" style={{ willChange: 'transform' }}>
               {/* Card Header */}
               <div className="text-center mb-6">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-500 to-primary-600 mb-4 shadow-lg shadow-primary-500/30">
@@ -206,15 +228,9 @@ export default function Hero() {
 
               {/* Visual Elements */}
               <div className="mt-8 pt-6 border-t border-neutral-100">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-accent-500 animate-pulse" />
-                    <span className="text-sm text-neutral-500">AI Agent Online</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Mic className="w-4 h-4 text-neutral-400" />
-                    <Volume2 className="w-4 h-4 text-neutral-400" />
-                  </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-accent-500 animate-pulse" />
+                  <span className="text-sm text-neutral-500">AI Assistant online</span>
                 </div>
               </div>
 
@@ -227,7 +243,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+              className="absolute -left-4 top-8 bg-white/90 backdrop-blur-md rounded-xl shadow-lg shadow-accent-500/10 border border-white/30 p-3 hidden lg:flex items-center gap-2"
             >
               <div className="w-8 h-8 rounded-lg bg-accent-100 flex items-center justify-center">
                 <CheckCircle2 className="w-4 h-4 text-accent-600" />
@@ -242,7 +258,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="absolute -right-4 bottom-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+              className="absolute -right-4 bottom-8 bg-white/90 backdrop-blur-md rounded-xl shadow-lg shadow-primary-500/10 border border-white/30 p-3 hidden lg:flex items-center gap-2"
             >
               <div className="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-primary-600" />
@@ -255,30 +271,6 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Trusted by */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1 }}
-          className="mt-20 pt-12 border-t border-neutral-100"
-        >
-          <p className="text-center text-sm text-neutral-400 mb-8">
-            Trusted by innovative companies worldwide
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            {["Company 1", "Company 2", "Company 3", "Company 4", "Company 5"].map((company, index) => (
-              <motion.div
-                key={company}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 1.2 + index * 0.1 }}
-                className="text-neutral-400 font-semibold text-lg"
-              >
-                {company}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

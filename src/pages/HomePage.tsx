@@ -1,43 +1,34 @@
 import {
   Navigation,
   Hero,
-  Features,
+  InAction,
+  WhyItMatters,
   HowItWorks,
-  VoiceDemo,
-  Integrations,
-  Languages,
   Industries,
-  Pricing,
-  Testimonials,
   Security,
   FAQ,
-  CTA,
-  Newsletter,
   Footer,
 } from "@/components";
 
-function App() {
+export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Navigation />
       <Hero />
-      <VoiceDemo />
-      <Features />
+      <InAction />
+      <WhyItMatters />
       <HowItWorks />
-      <Languages />
-      <Integrations />
       <Industries />
-      <Testimonials />
       <Security />
-      <Pricing />
+      {/*<VoiceDemo />*/}
+      {/*<Features />*/}
+      {/*<Languages />*/}
+      {/*<Integrations />*/}
+      {/*<Testimonials />*/}
       <FAQ />
-      <CTA />
-      <Newsletter />
+      {/*<CTA />*/}
+      {/*<Newsletter />*/}
       <Footer />
     </main>
   );
 }
-
-export default App;
-
-

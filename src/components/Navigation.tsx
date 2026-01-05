@@ -1,34 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone, Zap, Globe, Building2, BookOpen, Headphones } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  {
-    label: "Solution",
-    href: "#solution",
-    hasDropdown: true,
-    items: [
-      { label: "Try for Free", href: "#demo", icon: Phone },
-      { label: "Integrations", href: "#integrations", icon: Zap },
-      { label: "Languages", href: "#languages", icon: Globe },
-      { label: "AI Call Center", href: "#features", icon: Headphones },
-    ],
-  },
-  {
-    label: "Industries",
-    href: "#industries",
-    hasDropdown: true,
-    items: [
-      { label: "Healthcare", href: "#healthcare", icon: Building2 },
-      { label: "E-commerce", href: "#ecommerce", icon: Building2 },
-      { label: "Real Estate", href: "#realestate", icon: Building2 },
-      { label: "Call Centers", href: "#callcenters", icon: Building2 },
-    ],
-  },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Pricing", href: "/pricing", isRoute: true },
   { label: "Resources", href: "#resources", hasDropdown: true, items: [
     { label: "Blog", href: "#blog", icon: BookOpen },
     { label: "Documentation", href: "#docs", icon: BookOpen },
@@ -63,14 +42,14 @@ export default function Navigation() {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary-500 to-primary-600 flex items-center justify-center shadow-lg shadow-primary-500/25">
               <Phone className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-neutral-900">
               Valet<span className="text-primary-500">alk</span>
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-1">
@@ -81,21 +60,39 @@ export default function Navigation() {
                 onMouseEnter={() => item.hasDropdown && setActiveDropdown(item.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
               >
-                <a
-                  href={item.href}
-                  className={cn(
-                    "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors",
-                    "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50"
-                  )}
-                >
-                  {item.label}
-                  {item.hasDropdown && (
-                    <ChevronDown className={cn(
-                      "w-4 h-4 transition-transform",
-                      activeDropdown === item.label && "rotate-180"
-                    )} />
-                  )}
-                </a>
+                {item.isRoute ? (
+                  <Link
+                    to={item.href}
+                    className={cn(
+                      "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                      "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50"
+                    )}
+                  >
+                    {item.label}
+                    {item.hasDropdown && (
+                      <ChevronDown className={cn(
+                        "w-4 h-4 transition-transform",
+                        activeDropdown === item.label && "rotate-180"
+                      )} />
+                    )}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className={cn(
+                      "flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors",
+                      "text-neutral-600 hover:text-neutral-900 hover:bg-neutral-50"
+                    )}
+                  >
+                    {item.label}
+                    {item.hasDropdown && (
+                      <ChevronDown className={cn(
+                        "w-4 h-4 transition-transform",
+                        activeDropdown === item.label && "rotate-180"
+                      )} />
+                    )}
+                  </a>
+                )}
 
                 {/* Dropdown */}
                 <AnimatePresence>
@@ -166,14 +163,25 @@ export default function Navigation() {
           >
             <div className="container-custom py-4 space-y-2">
               {navItems.map((item) => (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  className="block px-4 py-3 text-base font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
+                item.isRoute ? (
+                  <Link
+                    key={item.label}
+                    to={item.href}
+                    className="block px-4 py-3 text-base font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={item.label}
+                    href={item.href}
+                    className="block px-4 py-3 text-base font-medium text-neutral-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {item.label}
+                  </a>
+                )
               ))}
               <div className="pt-4 space-y-2 border-t border-neutral-100">
                 <a
