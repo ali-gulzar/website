@@ -2,21 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown, Phone, Zap, Globe, Building2, BookOpen, Headphones } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Building2, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  {
-    label: "Solution",
-    href: "#solution",
-    hasDropdown: true,
-    items: [
-      { label: "Try for Free", href: "#demo", icon: Phone },
-      { label: "Integrations", href: "#integrations", icon: Zap },
-      { label: "Languages", href: "#languages", icon: Globe },
-      { label: "AI Call Center", href: "#features", icon: Headphones },
-    ],
-  },
   {
     label: "Industries",
     href: "#industries",
