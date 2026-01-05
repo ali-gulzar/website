@@ -1,5 +1,6 @@
 export { default as Navigation } from "./Navigation";
 export { default as Hero } from "./Hero";
+export { default as InAction } from "./InAction";
 export { default as Features } from "./Features";
 export { default as HowItWorks } from "./HowItWorks";
 export { default as VoiceDemo } from "./VoiceDemo";

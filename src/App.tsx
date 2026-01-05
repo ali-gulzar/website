@@ -1,6 +1,7 @@
 import {
   Navigation,
   Hero,
+  InAction,
   Features,
   HowItWorks,
   VoiceDemo,
@@ -21,6 +22,7 @@ function App() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
+      <InAction />
       <VoiceDemo />
       <Features />
       <HowItWorks />
