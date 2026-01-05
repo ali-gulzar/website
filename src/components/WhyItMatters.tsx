@@ -13,8 +13,7 @@ import {
   TrendingDown,
   TrendingUp,
   X,
-  Check,
-  ArrowRight
+  Check
 } from "lucide-react";
 
 const problems = [

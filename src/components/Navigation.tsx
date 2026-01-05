@@ -5,8 +5,21 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown, Phone, BookOpen } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { LucideIcon } from "lucide-react";
 
-const navItems = [
+interface NavItem {
+  label: string;
+  href: string;
+  isRoute?: boolean;
+  hasDropdown?: boolean;
+  items?: Array<{
+    label: string;
+    href: string;
+    icon: LucideIcon;
+  }>;
+}
+
+const navItems: NavItem[] = [
   { label: "Pricing", href: "/pricing", isRoute: true },
   { label: "Resources", href: "#resources", hasDropdown: true, items: [
     { label: "Blog", href: "#blog", icon: BookOpen },
