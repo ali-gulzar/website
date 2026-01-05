@@ -25,18 +25,18 @@ function App() {
       <Hero />
       <InAction />
       <WhyItMatters />
-      <VoiceDemo />
-      <Features />
       <HowItWorks />
-      <Languages />
-      <Integrations />
       <Industries />
-      <Testimonials />
       <Security />
-      <Pricing />
+      {/*<VoiceDemo />*/}
+      {/*<Features />*/}
+      {/*<Languages />*/}
+      {/*<Integrations />*/}
+      {/*<Testimonials />*/}
+      {/*<Pricing />*/}
       <FAQ />
-      <CTA />
-      <Newsletter />
+      {/*<CTA />*/}
+      {/*<Newsletter />*/}
       <Footer />
     </main>
   );
