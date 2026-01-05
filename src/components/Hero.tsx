@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Play, ArrowRight, CheckCircle2, Sparkles, Mic, Volume2 } from "lucide-react";
+import { Phone, Play, ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 
 export default function Hero() {
   const [phoneNumber, setPhoneNumber] = useState("");
@@ -205,15 +205,9 @@ export default function Hero() {
 
               {/* Visual Elements */}
               <div className="mt-8 pt-6 border-t border-neutral-100">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 rounded-full bg-accent-500 animate-pulse" />
-                    <span className="text-sm text-neutral-500">AI Agent Online</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Mic className="w-4 h-4 text-neutral-400" />
-                    <Volume2 className="w-4 h-4 text-neutral-400" />
-                  </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-accent-500 animate-pulse" />
+                  <span className="text-sm text-neutral-500">AI Assistant online</span>
                 </div>
               </div>
 
@@ -226,7 +220,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="absolute -left-4 top-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+              className="absolute -left-4 top-8 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
             >
               <div className="w-8 h-8 rounded-lg bg-accent-100 flex items-center justify-center">
                 <CheckCircle2 className="w-4 h-4 text-accent-600" />
@@ -241,7 +235,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8 }}
-              className="absolute -right-4 bottom-1/4 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
+              className="absolute -right-4 bottom-8 bg-white rounded-xl shadow-lg border border-neutral-100 p-3 hidden lg:flex items-center gap-2"
             >
               <div className="w-8 h-8 rounded-lg bg-primary-100 flex items-center justify-center">
                 <Sparkles className="w-4 h-4 text-primary-600" />
