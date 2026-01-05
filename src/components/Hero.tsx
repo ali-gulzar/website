@@ -80,9 +80,9 @@ export default function Hero() {
 
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl mx-auto lg:mx-0">
-              ValetTalk is an <strong>all-in-one platform</strong> that lets you make AI phone calls 
-              with voice agents that book meetings, qualify leads, and support customers — in{" "}
-              <strong>100+ languages</strong> with <strong>full compliance</strong>.
+              Saila is an <strong>all-in-one platform</strong> that answer calls, book appointments, 
+              and handle inquiries automatically. Works with <strong>Google Calendar, Calendly</strong>, 
+              and simple scheduling tools — in <strong>5+ languages</strong> with <strong>full compliance</strong>.
             </p>
 
             {/* Features */}
