@@ -284,7 +284,7 @@ export default function WhyItMatters() {
       </div>
 
       {/* Mobile View Adjustment - hide split backgrounds on mobile */}
-      <style jsx>{`
+      <style>{`
         @media (max-width: 1024px) {
           .absolute.inset-0.flex > div:first-child {
             width: 100%;
