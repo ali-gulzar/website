@@ -2,6 +2,7 @@ import {
   Navigation,
   Hero,
   InAction,
+  WhyItMatters,
   Features,
   HowItWorks,
   VoiceDemo,
@@ -23,6 +24,7 @@ function App() {
       <Navigation />
       <Hero />
       <InAction />
+      <WhyItMatters />
       <VoiceDemo />
       <Features />
       <HowItWorks />
