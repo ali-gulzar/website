@@ -21,8 +21,7 @@ export default function Hero() {
   };
 
   const features = [
-    "100+ Languages supported",
-    "300+ Integrations",
+    "5+ Languages supported",
     "Enterprise-grade security",
   ];
 
