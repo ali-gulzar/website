@@ -139,7 +139,7 @@ export default function InAction() {
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
                 <svg width="24" height="40" viewBox="0 0 24 40" fill="none">
-                  <path d="M12 0L12 35M12 35L6 29M12 35L18 29" stroke="#6366F1" strokeWidth="2" strokeLinecap="round" />
+                  <path d="M12 0L12 35M12 35L6 29M12 35L18 29" stroke="#4DD882" strokeWidth="2" strokeLinecap="round" />
                 </svg>
               </motion.div>
             </div>

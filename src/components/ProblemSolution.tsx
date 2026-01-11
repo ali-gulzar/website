@@ -280,7 +280,7 @@ export default function ProblemSolution() {
               href="#demo"
               whileHover={{ 
                 scale: 1.05,
-                boxShadow: "0 20px 40px rgba(99, 102, 241, 0.4)"
+                boxShadow: "0 20px 40px rgba(77, 216, 130, 0.4)"
               }}
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center btn-primary text-lg px-8 py-4"

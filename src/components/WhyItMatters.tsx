@@ -73,15 +73,15 @@ export default function WhyItMatters() {
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="w-1/2 bg-gradient-to-br from-neutral-800 via-neutral-900 to-neutral-950 relative"
+          className="w-1/2 bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-900 relative"
         >
           {/* Dark overlay pattern */}
           <div className="absolute inset-0 opacity-10" style={{
             backgroundImage: 'radial-gradient(circle, rgba(239, 68, 68, 0.3) 1px, transparent 1px)',
             backgroundSize: '30px 30px'
           }} />
-          {/* Red glow */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
+          {/* Subtle green-red gradient glow */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-red-500/10 to-primary-900/20 rounded-full blur-3xl" />
         </motion.div>
         
         {/* Right (Solution) Background */}
@@ -94,7 +94,7 @@ export default function WhyItMatters() {
         >
           {/* Light overlay pattern */}
           <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.3) 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgba(77, 216, 130, 0.3) 1px, transparent 1px)',
             backgroundSize: '30px 30px'
           }} />
           {/* Colorful glow */}
@@ -103,15 +103,15 @@ export default function WhyItMatters() {
         </motion.div>
       </div>
 
-      {/* Center Divider */}
-      <div className="absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 z-10">
+      {/* Center Divider - Hidden on mobile */}
+      <div className="hidden lg:block absolute inset-y-0 left-1/2 -translate-x-1/2 w-1 z-10">
         <motion.div
-          className="h-full w-full bg-gradient-to-b from-red-500 via-yellow-500 to-primary-500"
+          className="h-full w-full bg-gradient-to-b from-red-400 via-accent-500 to-primary-500"
           animate={{
             boxShadow: [
-              '0 0 20px rgba(239, 68, 68, 0.5)',
-              '0 0 40px rgba(99, 102, 241, 0.8)',
-              '0 0 20px rgba(239, 68, 68, 0.5)'
+              '0 0 20px rgba(239, 68, 68, 0.4)',
+              '0 0 40px rgba(77, 216, 130, 0.6)',
+              '0 0 20px rgba(239, 68, 68, 0.4)'
             ]
           }}
           transition={{ duration: 3, repeat: Infinity }}
@@ -136,15 +136,15 @@ export default function WhyItMatters() {
                 initial={{ scale: 0.9 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
-                className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full mb-4"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-400/40 rounded-full mb-4"
               >
-                <TrendingDown className="w-4 h-4 text-red-400" />
-                <span className="text-sm font-semibold text-red-200">The Problem</span>
+                <TrendingDown className="w-4 h-4 text-red-300" />
+                <span className="text-sm font-semibold text-red-100">The Problem</span>
               </motion.div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
                 Losing Customers
                 <br />
-                <span className="text-red-400">Every Single Day</span>
+                <span className="text-red-300">Every Single Day</span>
               </h2>
               <p className="text-neutral-400 text-lg">
                 Traditional phone systems are costing you more than you think
@@ -162,20 +162,20 @@ export default function WhyItMatters() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ 
                     x: 5,
-                    boxShadow: "0 10px 40px rgba(239, 68, 68, 0.3)"
+                    boxShadow: "0 10px 40px rgba(239, 68, 68, 0.2)"
                   }}
-                  className="group relative bg-neutral-800/50 backdrop-blur-sm border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 transition-all"
+                  className="group relative bg-neutral-700/60 backdrop-blur-sm border border-red-400/30 rounded-2xl p-6 hover:border-red-400/50 transition-all"
                 >
                   <div className="flex items-start gap-4">
                     <motion.div
                       whileHover={{ rotate: [0, -10, 10, 0], scale: 1.1 }}
-                      className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center group-hover:bg-red-500/30 transition-colors"
+                      className="flex-shrink-0 w-12 h-12 rounded-xl bg-red-400/25 flex items-center justify-center group-hover:bg-red-400/35 transition-colors"
                     >
-                      <problem.icon className="w-6 h-6 text-red-400" />
+                      <problem.icon className="w-6 h-6 text-red-300" />
                     </motion.div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between gap-2 mb-2">
-                        <h3 className="font-bold text-white group-hover:text-red-300 transition-colors">
+                        <h3 className="font-bold text-white group-hover:text-red-200 transition-colors">
                           {problem.title}
                         </h3>
                         <motion.div
@@ -184,7 +184,7 @@ export default function WhyItMatters() {
                           viewport={{ once: true }}
                           transition={{ delay: 0.3 + index * 0.1 }}
                         >
-                          <X className="w-5 h-5 text-red-500 flex-shrink-0" />
+                          <X className="w-5 h-5 text-red-400 flex-shrink-0" />
                         </motion.div>
                       </div>
                       <p className="text-sm text-neutral-400">
@@ -194,7 +194,7 @@ export default function WhyItMatters() {
                   </div>
 
                   {/* Hover glow effect */}
-                  <div className="absolute inset-0 bg-red-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <div className="absolute inset-0 bg-red-400/8 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
                 </motion.div>
               ))}
             </div>
@@ -240,7 +240,7 @@ export default function WhyItMatters() {
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                   whileHover={{ 
                     x: -5,
-                    boxShadow: "0 10px 40px rgba(99, 102, 241, 0.3)"
+                    boxShadow: "0 10px 40px rgba(77, 216, 130, 0.3)"
                   }}
                   className="group relative bg-white border border-primary-100 rounded-2xl p-6 hover:border-primary-300 transition-all shadow-sm hover:shadow-xl"
                 >
