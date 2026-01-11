@@ -8,44 +8,44 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Userlens.io inspired color palette
+        // Modern green color palette
         primary: {
-          50: "#EEF4FF",
-          100: "#E0EBFF",
-          200: "#C7D9FE",
-          300: "#A5BFFC",
-          400: "#819CF8",
-          500: "#6366F1", // Main primary - vibrant indigo
-          600: "#5046E5",
-          700: "#4338CA",
-          800: "#3730A3",
-          900: "#312E81",
-          950: "#1E1B4B",
+          50: "#F4FFFC",   // Lightest mint
+          100: "#E1FFF5",  // Very light mint
+          200: "#C5FFEB",  // Light mint
+          300: "#91EAAF",  // Mint green
+          400: "#6FE599",  // Medium mint
+          500: "#4DD882",  // Main primary - vibrant mint
+          600: "#3BC36E",  // Medium green
+          700: "#2FA858",  // Darker green
+          800: "#248944",  // Dark green
+          900: "#1F4B2C",  // Very dark green
+          950: "#162F1E",  // Deepest green
         },
         accent: {
-          50: "#F0FDF4",
-          100: "#DCFCE7",
-          200: "#BBF7D0",
-          300: "#86EFAC",
-          400: "#4ADE80",
-          500: "#22C55E", // Green accent
-          600: "#16A34A",
-          700: "#15803D",
-          800: "#166534",
-          900: "#14532D",
+          50: "#FDFFF4",   // Very light lime
+          100: "#F7FFD4",  // Light lime
+          200: "#EEFFB5",  // Pale lime
+          300: "#E3FF8F",  // Light lime-yellow
+          400: "#D3F56F",  // Medium lime
+          500: "#C3E956",  // Lime accent (from palette)
+          600: "#AED142",  // Darker lime
+          700: "#8FB62E",  // Olive-lime
+          800: "#6D911F",  // Olive
+          900: "#4D7111",  // Dark olive (from palette)
         },
         neutral: {
-          50: "#FAFAFA",
-          100: "#F5F5F5",
-          200: "#E5E5E5",
-          300: "#D4D4D4",
-          400: "#A3A3A3",
-          500: "#737373",
-          600: "#525252",
-          700: "#404040",
-          800: "#262626",
-          900: "#171717",
-          950: "#0A0A0A",
+          50: "#F9FDFB",   // Off-white with hint of green
+          100: "#F3FAF7",  // Very light gray-green
+          200: "#E6F4EE",  // Light gray-green
+          300: "#D1E8DD",  // Pale gray-green
+          400: "#9FC4B2",  // Medium gray-green
+          500: "#6D9985",  // Gray-green
+          600: "#4D7565",  // Dark gray-green
+          700: "#3A5B4E",  // Darker gray-green
+          800: "#2B4439",  // Very dark gray-green
+          900: "#1F322A",  // Almost black-green
+          950: "#14211B",  // Deepest gray-green
         },
       },
       fontFamily: {
@@ -83,14 +83,14 @@ const config: Config = {
           "50%": { transform: "translateY(-10px)" },
         },
         glow: {
-          "0%": { boxShadow: "0 0 20px rgba(99, 102, 241, 0.3)" },
-          "100%": { boxShadow: "0 0 40px rgba(99, 102, 241, 0.6)" },
+          "0%": { boxShadow: "0 0 20px rgba(77, 216, 130, 0.3)" },
+          "100%": { boxShadow: "0 0 40px rgba(77, 216, 130, 0.6)" },
         },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-gradient": "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-        "mesh-gradient": "linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(236, 72, 153, 0.05) 100%)",
+        "hero-gradient": "linear-gradient(135deg, #4DD882 0%, #1F4B2C 100%)",
+        "mesh-gradient": "linear-gradient(135deg, rgba(77, 216, 130, 0.1) 0%, rgba(145, 234, 175, 0.08) 50%, rgba(195, 233, 86, 0.05) 100%)",
       },
     },
   },

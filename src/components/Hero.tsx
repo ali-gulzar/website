@@ -33,7 +33,7 @@ export default function Hero() {
       <div 
         className="absolute inset-0" 
         style={{
-          backgroundImage: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 2px, transparent 2px)',
+          backgroundImage: 'radial-gradient(circle, rgba(77, 216, 130, 0.15) 2px, transparent 2px)',
           backgroundSize: '24px 24px'
         }} 
       />
