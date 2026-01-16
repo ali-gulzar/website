@@ -7,21 +7,21 @@ const testimonials = [
   {
     name: "Sarah Chen",
     role: "CEO, TechStart Inc.",
-    content: "ValetTalk has transformed our customer support. We now handle 3x more calls with the same team size, and our customer satisfaction scores have never been higher.",
+    content: "Speechory has transformed our customer support. We now handle 3x more calls with the same team size, and our customer satisfaction scores have never been higher.",
     rating: 5,
     avatar: "SC",
   },
   {
     name: "Michael Rodriguez",
     role: "Operations Director, MedCare Clinics",
-    content: "The appointment scheduling feature alone has saved us countless hours. Our no-show rate dropped by 40% since implementing ValetTalk's reminder calls.",
+    content: "The appointment scheduling feature alone has saved us countless hours. Our no-show rate dropped by 40% since implementing Speechory's reminder calls.",
     rating: 5,
     avatar: "MR",
   },
   {
     name: "Emily Watson",
     role: "Sales Manager, PropertyPro",
-    content: "Our sales team can now focus on closing deals instead of cold calling. ValetTalk qualifies leads for us and only sends us the most promising prospects.",
+    content: "Our sales team can now focus on closing deals instead of cold calling. Speechory qualifies leads for us and only sends us the most promising prospects.",
     rating: 5,
     avatar: "EW",
   },
@@ -42,7 +42,7 @@ const testimonials = [
   {
     name: "James Wilson",
     role: "CTO, FinanceHub",
-    content: "Enterprise-grade security was crucial for us. ValetTalk's compliance features made it easy to meet all our regulatory requirements.",
+    content: "Enterprise-grade security was crucial for us. Speechory's compliance features made it easy to meet all our regulatory requirements.",
     rating: 5,
     avatar: "JW",
   },
@@ -72,7 +72,7 @@ export default function Testimonials() {
             <span className="gradient-text">Worldwide</span>
           </h2>
           <p className="text-lg text-neutral-600">
-            See how companies are transforming their customer communications with ValetTalk.
+            See how companies are transforming their customer communications with Speechory.
           </p>
         </motion.div>
 

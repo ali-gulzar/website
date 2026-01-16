@@ -1,6 +1,6 @@
-# ValetTalk Website
+# Speechory Website
 
-A modern, responsive website for ValetTalk - an AI phone call agents platform. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
+A modern, responsive website for Speechory - an AI phone call agents platform. Built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
 
 ## Features
 

@@ -6,12 +6,12 @@ import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
-    question: "How does ValetTalk work as an AI phone call platform?",
-    answer: "ValetTalk automates customer interactions with customizable AI voice agents that can scale. It manages outbound (proactive outreach) and inbound (responsive) calls for tasks like lead qualification, customer support, and appointment scheduling. With no-code tools and flexible deployment options, ValetTalk enhances engagement and streamlines communication using the latest AI technology.",
+    question: "How does Speechory work as an AI phone call platform?",
+    answer: "Speechory automates customer interactions with customizable AI voice agents that can scale. It manages outbound (proactive outreach) and inbound (responsive) calls for tasks like lead qualification, customer support, and appointment scheduling. With no-code tools and flexible deployment options, Speechory enhances engagement and streamlines communication using the latest AI technology.",
   },
   {
-    question: "Can I use ValetTalk with my existing phone system?",
-    answer: "Yes, ValetTalk can integrate with most existing phone systems through SIP trunking, ensuring a smooth transition while maintaining your current functionality. We also offer dedicated phone numbers from over 150 countries if you need new numbers.",
+    question: "Can I use Speechory with my existing phone system?",
+    answer: "Yes, Speechory can integrate with most existing phone systems through SIP trunking, ensuring a smooth transition while maintaining your current functionality. We also offer dedicated phone numbers from over 150 countries if you need new numbers.",
   },
   {
     question: "Do I need technical expertise to create AI agents?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "What languages and voices are available?",
-    answer: "ValetTalk supports over 100 languages with hundreds of natural-sounding voice options for each. You can choose from different accents, genders, and speaking styles. We also offer voice cloning technology to create custom brand voices.",
+    answer: "Speechory supports over 100 languages with hundreds of natural-sounding voice options for each. You can choose from different accents, genders, and speaking styles. We also offer voice cloning technology to create custom brand voices.",
   },
   {
     question: "How do you handle security and compliance?",
@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     question: "Can calls be transferred to human agents?",
-    answer: "Absolutely. ValetTalk seamlessly transfers calls to human agents when the situation requires it or when customers request to speak with a person. You can configure custom transfer rules based on keywords, sentiment, or specific scenarios.",
+    answer: "Absolutely. Speechory seamlessly transfers calls to human agents when the situation requires it or when customers request to speak with a person. You can configure custom transfer rules based on keywords, sentiment, or specific scenarios.",
   },
   {
     question: "What integrations are available?",
@@ -63,7 +63,7 @@ export default function FAQ() {
               <span className="gradient-text">Questions</span>
             </h2>
             <p className="text-lg text-neutral-600 mb-8">
-              Everything you need to know about ValetTalk. Can't find what you're looking for?
+              Everything you need to know about Speechory. Can't find what you're looking for?
             </p>
             <a href="#contact" className="btn-primary">
               Contact Support
