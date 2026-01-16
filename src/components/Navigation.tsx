@@ -60,7 +60,7 @@ export default function Navigation() {
               <Phone className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold text-neutral-900">
-              Valet<span className="text-primary-500">alk</span>
+              <span className="text-primary-500">Speechory</span>
             </span>
           </Link>
 
