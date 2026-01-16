@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig({
   // IMPORTANT: Replace 'repo-name' with your repository name if deploying to https://<user>.github.io/<repo-name>/
   // If deploying to a custom domain or https://<user>.github.io/, set base to '/'
-  base: '/website/', 
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
