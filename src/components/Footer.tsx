@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Mail, MapPin, Twitter, Linkedin, Github, Youtube } from "lucide-react";
+import { Phone, MapPin, Twitter, Linkedin, Github, Youtube } from "lucide-react";
 
 const footerLinks = {
   solution: [
