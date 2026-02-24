@@ -65,17 +65,16 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-neutral-400 text-sm mb-6 leading-relaxed">
-              Create no-code AI phone call agents to automate incoming and outgoing calls in 100+ languages.
+              Create no-code AI phone call agents to automate incoming and outgoing calls in 5+ languages.
             </p>
             {/* Contact Info */}
             <div className="space-y-3 text-sm">
-              <a href="mailto:hello@speechory.com" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
-                <Mail className="w-4 h-4" />
-                hello@speechory.com
+              <a href="mailto:raza.qureshi@speechory.com" className="flex items-center gap-2 text-neutral-400 hover:text-white transition-colors">
+                raza.qureshi@speechory.com
               </a>
               <div className="flex items-center gap-2 text-neutral-400">
                 <MapPin className="w-4 h-4" />
-                San Francisco, CA
+                Heverlee, Belgium
               </div>
             </div>
           </div>

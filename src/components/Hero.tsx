@@ -113,10 +113,11 @@ export default function Hero() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <motion.a
-                href="#demo"
+                href="https://platform.speechory.com/login"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="btn-primary"
+                target="_blank"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />

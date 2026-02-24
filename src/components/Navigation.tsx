@@ -137,14 +137,16 @@ export default function Navigation() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <a
-              href="#login"
+              href="https://platform.speechory.com"
               className="px-4 py-2 text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              target="_blank"
             >
               Login
             </a>
             <a
-              href="#signup"
+              href="https://platform.speechory.com/signup"
               className="btn-primary text-sm"
+              target="_blank"
             >
               Start Free Trial
             </a>
